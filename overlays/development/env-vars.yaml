@@ -1,0 +1,5 @@
+- op: replace
+  path: /spec/template/spec/containers/0/env/0
+  value:
+    name: MEDIAWIKI_SITE_SERVER
+    value: dev-mediawiki.apps.ocp5.stormshift.coe.muc.redhat.com

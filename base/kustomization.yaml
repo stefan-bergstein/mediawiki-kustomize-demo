@@ -1,0 +1,9 @@
+kind: Kustomization
+
+resources:
+  - mariadb.yaml
+  - mediawiki-pvc.yaml
+  - mediawiki-deployment.yaml
+  - mediawiki-svc.yaml
+  - mediawiki-route.yaml
+
