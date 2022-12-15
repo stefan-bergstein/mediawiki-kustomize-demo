@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-mediawiki
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: prod-mediawiki
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: overlays/production
+    repoURL: https://github.com/stefan-bergstein/mediawiki-kustomize-demo
+    targetRevision: main
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
